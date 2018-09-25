@@ -1,0 +1,71 @@
+<div class="container-fluid"> 
+        
+    <div class="row container-fluid float-right" id="header">
+        <div class="col-md-12 mt-9 pt-9 mb-9">Nasib Nia</div>
+    </div>
+
+
+    <div class="row pt-9 mt-11" id="top-row"></div>
+     <div class="row pt-9 mt-21" id="Portfolio-row">
+        <div class="col-md-6"></div>
+        <div class="col-md-3" id= "portfolio-page" > 
+
+
+                {{#each allProjects}}
+
+                    <div id="card">
+                    <div class="front">
+                        <h5 class="card-title">  {{this.name}}  </h5> 
+                        <div class = "row"> 
+                            <div class="col-md-12 card"><img class="img-fluid " alt='{{this.imgName}}' src='{{this.img}}'></div>
+                        </div>
+                    </div> 
+                    <div class="back"> 
+                        <div class = "row"> <div class="col-md-12 "><p class="lead">  {{this.description}}  </p></div> 
+                        </div>  
+                        <div class = "row"> <div class="col-md-6 lnk"> 
+                            <a href="{{this.gitHub}}" target = "_blank" ><img class="img-fluid icon-github" src="assets/images/gitHub2.png">   </a> 
+                            </div> 
+                            <div class="col-md-6 lnk"> 
+                            <a href="{{this.webUrl}}" target = "_blank" ><img class="img-fluid icon-web" src="assets/images/web.png"> </a> 
+                            
+                                {{!-- <div> *  * 
+                        
+                                </div> --}}
+                            </div> 
+                        </div>     
+                    </div>
+                    </div>
+                {{/each}}
+                    
+        <div class="col-md-3" id="about-me-page"></div>
+    </div>
+    
+    
+
+        <footer class="row container-fluid">
+        <ul class="nav nav-light justify-content-end float-right">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id= "portfolio" href="/portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id= "about-me" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id= "newProj" href="/newProject">Add Project</a>
+            </li>
+        </ul>
+    </footer>
+</div>
